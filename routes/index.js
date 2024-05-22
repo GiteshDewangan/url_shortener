@@ -6,7 +6,8 @@ const Url = require('../models/url');
 router.get('/', (req, res) => {
   res.render('index', {
     gaTrackingId: process.env.GA_TRACKING_ID,
-    fbPixelId: process.env.FB_PIXEL_ID
+    fbPixelId: process.env.FB_PIXEL_ID,
+    baseUrl: process.env.BASE_URL
   });
 });
 

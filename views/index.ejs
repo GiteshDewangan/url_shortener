@@ -70,6 +70,8 @@
     }
   });
 
+  const url = '<%= baseUrl %>'
+  console.log(url)
    // Add event listener for copy button
    const copy = document.querySelector('#copy');
     if (copy) {
@@ -77,7 +79,7 @@
         const s_url = document.querySelector('#s_url');
         if (s_url) {
           const urlText = s_url.innerText || s_url.textContent; // Get the text content of the s_url element
-          navigator.clipboard.writeText(`http://localhost:5050/${urlText}`).then(() => {
+          navigator.clipboard.writeText(`${url}/${urlText}`).then(() => {
             console.log('Text copied to clipboard:', urlText);
           }).catch(err => {
             console.error('Failed to copy text: ', err);
