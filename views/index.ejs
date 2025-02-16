@@ -79,7 +79,7 @@
         const s_url = document.querySelector('#s_url');
         if (s_url) {
           const urlText = s_url.innerText || s_url.textContent; // Get the text content of the s_url element
-          navigator.clipboard.writeText(`https://8q80fjh2-5050.inc1.devtunnels.ms/${urlText}`).then(() => {
+          navigator.clipboard.writeText(`${process.env.BASE_URL}/${urlText}`).then(() => {
             console.log('Text copied to clipboard:', urlText);
           }).catch(err => {
             console.error('Failed to copy text: ', err);
