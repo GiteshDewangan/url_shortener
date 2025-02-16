@@ -29,7 +29,8 @@ router.post('/shorten', async (req, res) => {
   res.render('index', {
     shortUrl,
     gaTrackingId: process.env.GA_TRACKING_ID,
-    fbPixelId: process.env.FB_PIXEL_ID
+    fbPixelId: process.env.FB_PIXEL_ID,
+    baseUrl: process.env.BASE_URL   
   });
 });
 
